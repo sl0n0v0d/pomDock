@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="POMDockIconView" customModule="pomodoro" customModuleProvider="target">
+            <connections>
+                <outlet property="dockIconLabel" destination="08c-IV-Z0V" id="4Ip-Fm-BXw"/>
+                <outlet property="dockIconView" destination="c22-O7-iKe" id="FQp-pk-vam"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="325" height="257"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="08c-IV-Z0V">
+                    <rect key="frame" x="3" y="69" width="324" height="119"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" allowsUndo="NO" alignment="center" title="97" id="Cpj-pC-YOb">
+                        <font key="font" metaFont="system" size="100"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="08c-IV-Z0V" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="ciD-Va-O5e"/>
+                <constraint firstItem="08c-IV-Z0V" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="5" id="gwv-8n-V8J"/>
+                <constraint firstAttribute="trailing" secondItem="08c-IV-Z0V" secondAttribute="trailing" id="vnN-IR-qAN"/>
+            </constraints>
+            <point key="canvasLocation" x="61.5" y="146.5"/>
+        </customView>
+    </objects>
+</document>
