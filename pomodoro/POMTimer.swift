@@ -3,12 +3,12 @@ import Foundation
 
 class POMTimer {
 
-    var timeLeft:Double = 0
-    var startTime:Double = 0
+    var timeLeft: Double = 0
+    var startTime: Double = 0
     
-    private var tickInterval:Double = 0
-    private var tickTimer:DispatchSourceTimer?
-    private var tickClosure:((POMTimer)->())?
+    private var tickInterval: Double = 0
+    private var tickTimer: DispatchSourceTimer?
+    private var tickClosure: ((POMTimer)->())?
     
     func start(from countdown:Double, tick interval:Double, tickClosure:@escaping (POMTimer)->()) {
         timeLeft = countdown
