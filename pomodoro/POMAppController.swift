@@ -1,25 +1,31 @@
 
 import Foundation
 
+enum PomodoroMode {
+    case waitingFocus
+    case waitingDiffuse
+    case focused
+    case diffused
+    
+    var isIdle: Bool {
+        switch self {
+        case .waitingFocus, .waitingDiffuse:
+            return true
+        case .focused, .diffused:
+            return false
+        }
+    }
+}
+
 class POMAppController {
     
     private let dockIcon = POMDockIcon()
     private let pomtimer = POMTimer()
+    private let attentionGrabber = POMUserAttentionGrabber()
     
-    private var appMode:AppMode = AppMode.waitingFocus
-    private enum AppMode {
-        case waitingFocus
-        case waitingDiffuse
-        case focused
-        case diffused
-        
-        var isIdle: Bool {
-            switch self {
-            case .waitingFocus, .waitingDiffuse:
-                return true
-            case .focused, .diffused:
-                return false
-            }
+    private var appMode:PomodoroMode = PomodoroMode.waitingFocus {
+        didSet {
+            attentionGrabber.appModeChanged(to: appMode)
         }
     }
     
