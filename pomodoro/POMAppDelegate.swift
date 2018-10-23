@@ -8,10 +8,17 @@ class POMAppDelegate: NSObject, NSApplicationDelegate {
     
     private var time:DispatchTime!
     
+    func applicationDidFinishLaunching(_ notification: Notification) {
+        // give focus back to previously active app
+        NSApp.hide(self)
+    }
+    
     func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
+        // give focus back to previously active app
+        NSApp.hide(self)
         appController.dockIconClicked()
-
-        return true
+        
+        return false
     }
     
 }

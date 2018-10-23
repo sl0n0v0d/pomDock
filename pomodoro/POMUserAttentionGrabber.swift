@@ -2,14 +2,19 @@
 import Cocoa
 
 class POMUserAttentionGrabber {
+    
+    var timer: Timer? = nil
+    
     func appModeChanged(to mode:PomodoroMode) {
         switch mode {
         case .waitingFocus, .waitingDiffuse:
-            print("start attention grabbing: informationalRequest")
-            NSApp.requestUserAttention(.informationalRequest)
+            let attentionId = NSApp.requestUserAttention(.informationalRequest)
+            timer = Timer.scheduledTimer(withTimeInterval: 10, repeats: true, block: { (timer) in
+                NSApp.cancelUserAttentionRequest(attentionId)
+                NSApp.requestUserAttention(.informationalRequest)
+            })
         case .focused, .diffused:
-            print("finish attention grabbing")
-            NSApp.requestUserAttention(.criticalRequest)
+            timer?.invalidate()
         }
     }
 }
