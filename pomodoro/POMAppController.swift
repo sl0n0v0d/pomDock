@@ -35,8 +35,11 @@ class POMAppController {
             diffuseMode()
         case .waitingFocus:
             focusMode()
-        case .focused, .diffused:
-            break
+        case .diffused:
+            pomtimer.stop()
+            waitFocusMode()
+        case .focused:
+            pomtimer.paused ? pomtimer.resume() : pomtimer.pause()
         }
     }
     
