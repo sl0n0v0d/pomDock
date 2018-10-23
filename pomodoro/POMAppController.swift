@@ -49,20 +49,20 @@ class POMAppController {
         if timer.timeLeft < 0 {
             timerFinished(timer)
         } else {
-            self.dockIcon.text = "\(timer.timeLeft)"
+            self.dockIcon.text = String(format:"%.0f", timer.timeLeft)
         }
     }
     
     private func focusMode() {
         appMode = .focused
-        pomtimer.start(from: 2.0, tick: 0.5) { timer in
+        pomtimer.start(from: Config.focusTime, tick: Config.tickInterval) { timer in
             self.handleTick(timer)
         }
     }
     
     private func diffuseMode() {
         appMode = .diffused
-        pomtimer.start(from: 1.0, tick: 0.5) { timer in
+        pomtimer.start(from: Config.diffuseTime, tick: Config.tickInterval) { timer in
             self.handleTick(timer)
         }
     }
