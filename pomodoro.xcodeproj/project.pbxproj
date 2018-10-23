@@ -67,13 +67,21 @@
 				C0C99DFC216B7B4D00B90AD5 /* POMDockIconView.swift */,
 				C0C99E04216F601400B90AD5 /* POMTimer.swift */,
 				C006AAA3217DCD6C00E4480B /* POMUserAttentionGrabber.swift */,
+				C006AAA7217F1DCC00E4480B /* Resources */,
+			);
+			path = pomodoro;
+			sourceTree = "<group>";
+		};
+		C006AAA7217F1DCC00E4480B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				55DB8B6C21678657000FFFDA /* Assets.xcassets */,
 				55DB8B6E21678657000FFFDA /* MainMenu.xib */,
 				C0C99DFE216B7D9600B90AD5 /* POMDockIconView.xib */,
 				55DB8B7121678657000FFFDA /* Info.plist */,
 				55DB8B7221678657000FFFDA /* pomodoro.entitlements */,
 			);
-			path = pomodoro;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
