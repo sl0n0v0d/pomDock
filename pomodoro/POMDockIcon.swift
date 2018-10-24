@@ -10,6 +10,12 @@ class POMDockIcon {
         }
     }
     
+    var time: Double? {
+        didSet {
+            dockIconView.time = time
+        }
+    }
+    
     private let dockIconView = POMDockIconView()
     
     init() {

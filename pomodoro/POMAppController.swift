@@ -52,7 +52,7 @@ class POMAppController {
         if timer.timeLeft < 0 {
             timerFinished(timer)
         } else {
-            self.dockIcon.text = String(format:"%.0f", timer.timeLeft)
+            self.dockIcon.time = timer.timeLeft
         }
     }
     
