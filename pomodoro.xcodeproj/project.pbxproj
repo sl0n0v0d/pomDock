@@ -302,7 +302,7 @@
 				CODE_SIGN_ENTITLEMENTS = pomodoro/pomodoro.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = pomodoro/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/pomodoro/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -320,7 +320,7 @@
 				CODE_SIGN_ENTITLEMENTS = pomodoro/pomodoro.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = pomodoro/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/pomodoro/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
