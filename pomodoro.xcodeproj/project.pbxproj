@@ -13,6 +13,7 @@
 		C006AAA22179BB3400E4480B /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = C006AAA12179BB3400E4480B /* Log.swift */; };
 		C006AAA4217DCD6C00E4480B /* POMUserAttentionGrabber.swift in Sources */ = {isa = PBXBuildFile; fileRef = C006AAA3217DCD6C00E4480B /* POMUserAttentionGrabber.swift */; };
 		C006AAA6217F0E3200E4480B /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = C006AAA5217F0E3200E4480B /* Config.swift */; };
+		C006AAAB2187386A00E4480B /* POMDockMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C006AAAA2187386A00E4480B /* POMDockMenu.swift */; };
 		C0C99DFD216B7B4D00B90AD5 /* POMDockIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C99DFC216B7B4D00B90AD5 /* POMDockIconView.swift */; };
 		C0C99DFF216B7D9600B90AD5 /* POMDockIconView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0C99DFE216B7D9600B90AD5 /* POMDockIconView.xib */; };
 		C0C99E01216CDB3B00B90AD5 /* POMAppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C99E00216CDB3B00B90AD5 /* POMAppController.swift */; };
@@ -29,6 +30,7 @@
 		C006AAA12179BB3400E4480B /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		C006AAA3217DCD6C00E4480B /* POMUserAttentionGrabber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POMUserAttentionGrabber.swift; sourceTree = "<group>"; };
 		C006AAA5217F0E3200E4480B /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		C006AAAA2187386A00E4480B /* POMDockMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POMDockMenu.swift; sourceTree = "<group>"; };
 		C0C99DFB216B565300B90AD5 /* pomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pomodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0C99DFC216B7B4D00B90AD5 /* POMDockIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POMDockIconView.swift; sourceTree = "<group>"; };
 		C0C99DFE216B7D9600B90AD5 /* POMDockIconView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = POMDockIconView.xib; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				C0C99E00216CDB3B00B90AD5 /* POMAppController.swift */,
 				55DB8B6A21678655000FFFDA /* POMAppDelegate.swift */,
 				C0C99E02216CDCFD00B90AD5 /* POMDockIcon.swift */,
+				C006AAAA2187386A00E4480B /* POMDockMenu.swift */,
 				C0C99DFC216B7B4D00B90AD5 /* POMDockIconView.swift */,
 				C0C99E04216F601400B90AD5 /* POMTimer.swift */,
 				C006AAA3217DCD6C00E4480B /* POMUserAttentionGrabber.swift */,
@@ -158,6 +161,7 @@
 				55DB8B6B21678655000FFFDA /* POMAppDelegate.swift in Sources */,
 				C0C99DFD216B7B4D00B90AD5 /* POMDockIconView.swift in Sources */,
 				C006AAA22179BB3400E4480B /* Log.swift in Sources */,
+				C006AAAB2187386A00E4480B /* POMDockMenu.swift in Sources */,
 				C0C99E01216CDB3B00B90AD5 /* POMAppController.swift in Sources */,
 				C0C99E05216F601400B90AD5 /* POMTimer.swift in Sources */,
 				C006AAA6217F0E3200E4480B /* Config.swift in Sources */,
@@ -299,7 +303,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = pomodoro/pomodoro.entitlements;
+				CODE_SIGN_ENTITLEMENTS = pomodoro/Resources/pomodoro.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/pomodoro/Resources/Info.plist";
@@ -317,7 +321,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = pomodoro/pomodoro.entitlements;
+				CODE_SIGN_ENTITLEMENTS = pomodoro/Resources/pomodoro.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/pomodoro/Resources/Info.plist";

@@ -17,8 +17,8 @@ enum PomodoroMode {
     }
 }
 
-class POMAppController {
-    
+class POMAppController: DockMenuDelegate {
+
     private let dockIcon = POMDockIcon()
     private let pomtimer = POMTimer()
     private let attentionGrabber = POMUserAttentionGrabber()
@@ -90,6 +90,20 @@ class POMAppController {
             waitDiffuseMode()
         case .waitingFocus, .waitingDiffuse:
             break
+        }
+    }
+    
+    //MARK: - DockMenuDelegate
+    func dockMenuCancelAction() {
+        switch appMode {
+        case .waitingDiffuse, .waitingFocus:
+            break
+        case .diffused:
+            pomtimer.stop()
+            waitFocusMode()
+        case .focused:
+            pomtimer.stop()
+            waitDiffuseMode()
         }
     }
 }

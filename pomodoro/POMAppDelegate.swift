@@ -21,4 +21,9 @@ class POMAppDelegate: NSObject, NSApplicationDelegate {
         return false
     }
     
+    func applicationDockMenu(_ sender: NSApplication) -> NSMenu? {
+        let dockMenu = POMDockMenu()
+        dockMenu.pomDelegate = appController
+        return dockMenu
+    }
 }
