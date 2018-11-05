@@ -2,12 +2,12 @@
 import Cocoa
 
 protocol DockMenuDelegate: class {
-    func dockMenuCancelAction()
+    func cancelAction()
 }
 
 class POMDockMenu: NSMenu {
 
-    weak var pomDelegate: DockMenuDelegate?
+    weak var pomMenuDelegate: DockMenuDelegate?
 
     init() {
         super.init(title: "")
@@ -19,6 +19,6 @@ class POMDockMenu: NSMenu {
     }
     
     @objc private func didSelectCancelItem() {
-        pomDelegate?.dockMenuCancelAction()
+        pomMenuDelegate?.cancelAction()
     }
 }

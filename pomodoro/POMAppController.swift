@@ -67,9 +67,20 @@ class POMAppController: DockMenuDelegate {
             pomtimer.stop()
             waitFocusMode()
         case .focused:
-            pomtimer.paused ? pomtimer.resume() : pomtimer.pause()
+            if pomtimer.paused {
+                pomtimer.resume()
+            } else {
+                pomtimer.pause()
+                let answer = POMModalQuestion.dialogYesNo(question: "Cancel current interval?")
+                if answer == true {
+                    cancelAction()
+                } else {
+                    pomtimer.resume()
+                }
+            }
         }
     }
+
     
     private func handleTick(_ timer: POMTimer) {
         if appMode.isIdle {
@@ -97,16 +108,14 @@ class POMAppController: DockMenuDelegate {
         }
     }
     
-    func dockMenuCancelAction() {
+    func cancelAction() {
+        pomtimer.stop()
+        
         switch appMode {
         case .waitingDiffuse, .waitingFocus:
             break
-        case .diffused:
-            pomtimer.stop()
+        case .diffused, .focused:
             waitFocusMode()
-        case .focused:
-            pomtimer.stop()
-            waitDiffuseMode()
         }
     }
 }

@@ -13,15 +13,16 @@ class POMAppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
         // give focus back to previously active app
-        NSApp.hide(self)
+        
         appController.dockIconClicked()
+        NSApp.hide(self)
         
         return false
     }
     
     func applicationDockMenu(_ sender: NSApplication) -> NSMenu? {
         let dockMenu = POMDockMenu()
-        dockMenu.pomDelegate = appController
+        dockMenu.pomMenuDelegate = appController
         return dockMenu
     }
 }
