@@ -6,8 +6,6 @@ class POMAppDelegate: NSObject, NSApplicationDelegate {
     
     private let appController = POMAppController()
     
-    private var time:DispatchTime!
-    
     func applicationDidFinishLaunching(_ notification: Notification) {
         // give focus back to previously active app
         NSApp.hide(self)

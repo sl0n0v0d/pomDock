@@ -29,6 +29,34 @@ class POMAppController: DockMenuDelegate {
         }
     }
     
+    //MARK: - Mode setters
+    
+    private func focusMode() {
+        appMode = .focused
+        pomtimer.start(from: Config.focusTime, tick: Config.tickInterval) { timer in
+            self.handleTick(timer)
+        }
+    }
+    
+    private func diffuseMode() {
+        appMode = .diffused
+        pomtimer.start(from: Config.diffuseTime, tick: Config.tickInterval) { timer in
+            self.handleTick(timer)
+        }
+    }
+    
+    private func waitFocusMode() {
+        appMode = .waitingFocus
+        dockIcon.waitFocus()
+    }
+    
+    private func waitDiffuseMode() {
+        appMode = .waitingDiffuse
+        dockIcon.waitDiffuse()
+    }
+    
+    //MARK: - Events
+    
     func dockIconClicked() {
         switch appMode {
         case .waitingDiffuse:
@@ -56,30 +84,6 @@ class POMAppController: DockMenuDelegate {
         }
     }
     
-    private func focusMode() {
-        appMode = .focused
-        pomtimer.start(from: Config.focusTime, tick: Config.tickInterval) { timer in
-            self.handleTick(timer)
-        }
-    }
-    
-    private func diffuseMode() {
-        appMode = .diffused
-        pomtimer.start(from: Config.diffuseTime, tick: Config.tickInterval) { timer in
-            self.handleTick(timer)
-        }
-    }
-    
-    private func waitFocusMode() {
-        appMode = .waitingFocus
-        dockIcon.waitFocus()
-    }
-    
-    private func waitDiffuseMode() {
-        appMode = .waitingDiffuse
-        dockIcon.waitDiffuse()
-    }
-    
     private func timerFinished(_ timer: POMTimer) {
         timer.stop()
         
@@ -93,7 +97,6 @@ class POMAppController: DockMenuDelegate {
         }
     }
     
-    //MARK: - DockMenuDelegate
     func dockMenuCancelAction() {
         switch appMode {
         case .waitingDiffuse, .waitingFocus:
@@ -107,4 +110,3 @@ class POMAppController: DockMenuDelegate {
         }
     }
 }
-
