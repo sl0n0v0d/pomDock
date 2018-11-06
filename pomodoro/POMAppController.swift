@@ -31,26 +31,26 @@ class POMAppController: DockMenuDelegate {
     
     //MARK: - Mode setters
     
-    private func focusMode() {
+    private func setFocusMode() {
         appMode = .focused
         pomtimer.start(from: Config.focusTime, tick: Config.tickInterval) { timer in
             self.handleTick(timer)
         }
     }
     
-    private func diffuseMode() {
+    private func setDiffuseMode() {
         appMode = .diffused
         pomtimer.start(from: Config.diffuseTime, tick: Config.tickInterval) { timer in
             self.handleTick(timer)
         }
     }
     
-    private func waitFocusMode() {
+    private func setWaitFocusMode() {
         appMode = .waitingFocus
         dockIcon.waitFocus()
     }
     
-    private func waitDiffuseMode() {
+    private func setWaitDiffuseMode() {
         appMode = .waitingDiffuse
         dockIcon.waitDiffuse()
     }
@@ -60,12 +60,12 @@ class POMAppController: DockMenuDelegate {
     func dockIconClicked() {
         switch appMode {
         case .waitingDiffuse:
-            diffuseMode()
+            setDiffuseMode()
         case .waitingFocus:
-            focusMode()
+            setFocusMode()
         case .diffused:
             pomtimer.stop()
-            waitFocusMode()
+            setWaitFocusMode()
         case .focused:
             if pomtimer.paused {
                 pomtimer.resume()
@@ -80,7 +80,6 @@ class POMAppController: DockMenuDelegate {
             }
         }
     }
-
     
     private func handleTick(_ timer: POMTimer) {
         if appMode.isIdle {
@@ -100,9 +99,9 @@ class POMAppController: DockMenuDelegate {
         
         switch appMode {
         case .diffused:
-            waitFocusMode()
+            setWaitFocusMode()
         case .focused:
-            waitDiffuseMode()
+            setWaitDiffuseMode()
         case .waitingFocus, .waitingDiffuse:
             break
         }
@@ -115,7 +114,7 @@ class POMAppController: DockMenuDelegate {
         case .waitingDiffuse, .waitingFocus:
             break
         case .diffused, .focused:
-            waitFocusMode()
+            setWaitFocusMode()
         }
     }
 }
