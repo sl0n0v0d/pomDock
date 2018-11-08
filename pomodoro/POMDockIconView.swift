@@ -24,6 +24,7 @@ class POMDockIconView {
             guard let time = time else {
                 return
             }
+            
             let fontSize = fontSizeFitting(time: time)
             
             // Set font height by re-setting font
@@ -99,7 +100,6 @@ class POMDockIconView {
         }
         
         return CGFloat(result)
-        
     }
     
     private func refreshDockIcon() {
