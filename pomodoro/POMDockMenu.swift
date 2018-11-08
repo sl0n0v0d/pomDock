@@ -11,6 +11,7 @@ class POMDockMenu: NSMenu {
 
     init() {
         super.init(title: "")
+        self.addItem(withTitle: "Pomodoros today: \(POMStatistics.finishedPomodorosToday())", action: nil, keyEquivalent: "")
         self.addItem(withTitle: "Cancel", action: #selector(didSelectCancelItem), keyEquivalent: "").target = self
     }
     

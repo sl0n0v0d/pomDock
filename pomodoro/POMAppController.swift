@@ -101,6 +101,7 @@ class POMAppController: DockMenuDelegate {
         case .diffused:
             setWaitFocusMode()
         case .focused:
+            POMStatistics.pomodoroDone()
             setWaitDiffuseMode()
         case .waitingFocus, .waitingDiffuse:
             break
