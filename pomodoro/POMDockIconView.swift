@@ -11,6 +11,7 @@ class POMDockIconView {
     // Text shown on dock icon (one line)
     var text: String? {
         didSet {
+            dockIconLabel.textColor = #colorLiteral(red: 0.9857949611, green: 0.9857949611, blue: 0.9857949611, alpha: 1)
             dockIconLabel.stringValue = "\(text ?? "")"
             let fontHeight = fontSizeToFitIconSize(dockIconView!.bounds.size)
             dockIconLabel.font = NSFont.systemFont(ofSize: fontHeight) // Set font height by re-setting font

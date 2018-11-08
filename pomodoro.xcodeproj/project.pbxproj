@@ -15,6 +15,7 @@
 		C006AAA6217F0E3200E4480B /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = C006AAA5217F0E3200E4480B /* Config.swift */; };
 		C006AAAB2187386A00E4480B /* POMDockMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C006AAAA2187386A00E4480B /* POMDockMenu.swift */; };
 		C02B4541219076CF0073D9B5 /* POMModalQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02B4540219076CF0073D9B5 /* POMModalQuestion.swift */; };
+		C0A186D2219331A2001C7C6C /* POMDockIconViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A186D1219331A2001C7C6C /* POMDockIconViewBackground.swift */; };
 		C0C99DFD216B7B4D00B90AD5 /* POMDockIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C99DFC216B7B4D00B90AD5 /* POMDockIconView.swift */; };
 		C0C99DFF216B7D9600B90AD5 /* POMDockIconView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0C99DFE216B7D9600B90AD5 /* POMDockIconView.xib */; };
 		C0C99E01216CDB3B00B90AD5 /* POMAppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C99E00216CDB3B00B90AD5 /* POMAppController.swift */; };
@@ -33,6 +34,7 @@
 		C006AAA5217F0E3200E4480B /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		C006AAAA2187386A00E4480B /* POMDockMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POMDockMenu.swift; sourceTree = "<group>"; };
 		C02B4540219076CF0073D9B5 /* POMModalQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POMModalQuestion.swift; sourceTree = "<group>"; };
+		C0A186D1219331A2001C7C6C /* POMDockIconViewBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POMDockIconViewBackground.swift; sourceTree = "<group>"; };
 		C0C99DFB216B565300B90AD5 /* pomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pomodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0C99DFC216B7B4D00B90AD5 /* POMDockIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POMDockIconView.swift; sourceTree = "<group>"; };
 		C0C99DFE216B7D9600B90AD5 /* POMDockIconView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = POMDockIconView.xib; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				55DB8B6A21678655000FFFDA /* POMAppDelegate.swift */,
 				C0C99E02216CDCFD00B90AD5 /* POMDockIcon.swift */,
 				C0C99DFC216B7B4D00B90AD5 /* POMDockIconView.swift */,
+				C0A186D1219331A2001C7C6C /* POMDockIconViewBackground.swift */,
 				C006AAAA2187386A00E4480B /* POMDockMenu.swift */,
 				C02B4540219076CF0073D9B5 /* POMModalQuestion.swift */,
 				C0C99E04216F601400B90AD5 /* POMTimer.swift */,
@@ -167,6 +170,7 @@
 				C006AAA22179BB3400E4480B /* Log.swift in Sources */,
 				C006AAAB2187386A00E4480B /* POMDockMenu.swift in Sources */,
 				C0C99E01216CDB3B00B90AD5 /* POMAppController.swift in Sources */,
+				C0A186D2219331A2001C7C6C /* POMDockIconViewBackground.swift in Sources */,
 				C0C99E05216F601400B90AD5 /* POMTimer.swift in Sources */,
 				C006AAA6217F0E3200E4480B /* Config.swift in Sources */,
 				C0C99E03216CDCFD00B90AD5 /* POMDockIcon.swift in Sources */,

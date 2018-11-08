@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -14,11 +14,14 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="c22-O7-iKe">
-            <rect key="frame" x="0.0" y="0.0" width="325" height="257"/>
+            <rect key="frame" x="0.0" y="0.0" width="325" height="480"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="COA-6K-LU3" customClass="POMDockIconViewBackground" customModule="pomodoro" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="30" width="325" height="420"/>
+                </customView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="08c-IV-Z0V">
-                    <rect key="frame" x="3" y="69" width="324" height="119"/>
+                    <rect key="frame" x="3" y="181" width="324" height="119"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" allowsUndo="NO" alignment="center" title="97" id="Cpj-pC-YOb">
                         <font key="font" metaFont="system" size="100"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -27,8 +30,12 @@
                 </textField>
             </subviews>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="COA-6K-LU3" secondAttribute="trailing" id="0tc-2O-0Jd"/>
+                <constraint firstItem="COA-6K-LU3" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="Oid-nh-oZp"/>
+                <constraint firstItem="COA-6K-LU3" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="30" id="VRA-nx-7A1"/>
                 <constraint firstItem="08c-IV-Z0V" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="ciD-Va-O5e"/>
                 <constraint firstItem="08c-IV-Z0V" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="5" id="gwv-8n-V8J"/>
+                <constraint firstAttribute="bottom" secondItem="COA-6K-LU3" secondAttribute="bottom" constant="30" id="sTP-qu-VVf"/>
                 <constraint firstAttribute="trailing" secondItem="08c-IV-Z0V" secondAttribute="trailing" id="vnN-IR-qAN"/>
             </constraints>
             <point key="canvasLocation" x="61.5" y="146.5"/>
