@@ -33,14 +33,14 @@ class POMAppController: DockMenuDelegate {
     
     private func setFocusMode() {
         appMode = .focused
-        pomtimer.start(from: Config.focusTime, tick: Config.tickInterval) { timer in
+        pomtimer.start(from: Config.shared.focusTime, tick: Config.shared.tickInterval) { timer in
             self.handleTick(timer)
         }
     }
     
     private func setDiffuseMode() {
         appMode = .diffused
-        pomtimer.start(from: Config.diffuseTime, tick: Config.tickInterval) { timer in
+        pomtimer.start(from: Config.shared.diffuseTime, tick: Config.shared.tickInterval) { timer in
             self.handleTick(timer)
         }
     }
