@@ -71,7 +71,7 @@ class POMDockIconView {
         var result = minFontSize
         
         for fs in minFontSize...maxFontSize {
-            let rect = widestPossibleTime.boundingRect(with: dockIconView!.bounds.size, options: .usesDeviceMetrics, attributes: [NSAttributedString.Key.font:NSFont.monospacedDigitSystemFont(ofSize: CGFloat(fs), weight: .black)]) //systemFont(ofSize: CGFloat(fs))])
+            let rect = widestPossibleTime.boundingRect(with: dockIconView!.bounds.size, options: .usesDeviceMetrics, attributes: [NSAttributedString.Key.font:NSFont.monospacedDigitSystemFont(ofSize: CGFloat(fs), weight: .black)])
             
             if (rect.width >= targetWidth) {
                 break
