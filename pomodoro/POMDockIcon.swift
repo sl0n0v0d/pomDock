@@ -23,10 +23,12 @@ class POMDockIcon {
     }
     
     func waitFocus(){
+        dockIconView.dockIconViewBackground.layer?.backgroundColor = #colorLiteral(red: 0.8715433478, green: 0.3254662156, blue: 0.276635766, alpha: 1)
         dockIconView.text = "Focus"
     }
     
     func waitDiffuse() {
+        dockIconView.dockIconViewBackground.layer?.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
         dockIconView.text = "Diffuse"
     }
 }

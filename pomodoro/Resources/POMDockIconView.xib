@@ -9,6 +9,7 @@
             <connections>
                 <outlet property="dockIconLabel" destination="08c-IV-Z0V" id="4Ip-Fm-BXw"/>
                 <outlet property="dockIconView" destination="c22-O7-iKe" id="FQp-pk-vam"/>
+                <outlet property="dockIconViewBackground" destination="COA-6K-LU3" id="pqc-9w-frG"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>

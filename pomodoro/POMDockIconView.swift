@@ -7,6 +7,7 @@ class POMDockIconView {
     
     @IBOutlet var dockIconView: NSView!
     @IBOutlet var dockIconLabel: NSTextField!
+    @IBOutlet weak var dockIconViewBackground: POMDockIconViewBackground!
     
     // Text shown on dock icon (one line)
     var text: String? {
