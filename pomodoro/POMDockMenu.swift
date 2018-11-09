@@ -44,7 +44,9 @@ class POMDockMenu: NSMenu {
             if currentFocusIntervalMinutes == Double(intervalMinutes) {
                 intervalMinutesString += " ✓"
             }
-            setPomodoroIntervalMenu.addItem(withTitle: intervalMinutesString, action:  #selector(didSelectPomodoroInterval), keyEquivalent: "").target = self
+            setPomodoroIntervalMenu.addItem(withTitle: intervalMinutesString,
+                                            action:  #selector(didSelectPomodoroInterval),
+                                            keyEquivalent: "").target = self
         }
         let pomodoroTimeSubmenu = self.addItem(withTitle: "Pomodoro Minutes", action: nil, keyEquivalent: "")
         self.setSubmenu(setPomodoroIntervalMenu, for: pomodoroTimeSubmenu)
@@ -57,7 +59,9 @@ class POMDockMenu: NSMenu {
             if currentDiffuseIntervalMinutes == Double(intervalMinutes) {
                 intervalMinutesString += " ✓"
             }
-            setDiffuseIntervalMenu.addItem(withTitle: intervalMinutesString, action:  #selector(didSelectDiffuseInterval), keyEquivalent: "").target = self
+            setDiffuseIntervalMenu.addItem(withTitle: intervalMinutesString,
+                                           action:  #selector(didSelectDiffuseInterval),
+                                           keyEquivalent: "").target = self
         }
         let diffuseTimeSubmenu = self.addItem(withTitle: "Diffuse Minutes", action: nil, keyEquivalent: "")
         self.setSubmenu(setDiffuseIntervalMenu, for: diffuseTimeSubmenu)
