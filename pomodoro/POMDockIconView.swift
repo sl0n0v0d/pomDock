@@ -16,7 +16,6 @@ class POMDockIconView {
             dockIconLabel.stringValue = "\(text ?? "")"
             let fontHeight = fontSizeToFitIconSize(dockIconView!.bounds.size)
             dockIconLabel.font = NSFont.systemFont(ofSize: fontHeight) // Set font height by re-setting font
-            refreshDockIcon()
         }
     }
     
@@ -32,7 +31,6 @@ class POMDockIconView {
             dockIconLabel.font = NSFont.monospacedDigitSystemFont(ofSize: CGFloat(fontSize), weight: .regular)
             
             dockIconLabel.stringValue = clockTime(from: time)
-            refreshDockIcon()
         }
     }
     
@@ -103,7 +101,7 @@ class POMDockIconView {
         return CGFloat(result)
     }
     
-    private func refreshDockIcon() {
+    func show() {
         appDockTile.display()
     }
 }

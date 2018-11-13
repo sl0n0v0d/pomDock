@@ -1,5 +1,5 @@
 
-import Foundation
+import AppKit
 
 class POMDockIcon {
     
@@ -7,28 +7,42 @@ class POMDockIcon {
     var text: String? {
         didSet {
             dockIconView.text = text
+            dockIconView.show()
         }
     }
     
     var time: Double? {
         didSet {
             dockIconView.time = time
+            dockIconView.show()
         }
     }
     
     private let dockIconView = POMDockIconView()
+    private var observerToken: Any!
     
     init() {
+        let darkModeNotificationName = NSNotification.Name(rawValue: "AppleInterfaceThemeChangedNotification")
+        observerToken = DistributedNotificationCenter.default().addObserver(forName: darkModeNotificationName,
+                                                                            object: nil, queue: nil) { _ in
+                                                                                self.dockIconView.show()
+        }
         waitFocus()
     }
     
+    deinit {
+        DistributedNotificationCenter.default().removeObserver(observerToken)
+    }
+    
     func waitFocus(){
-        dockIconView.dockIconViewBackground.layer?.backgroundColor = #colorLiteral(red: 0.8715433478, green: 0.3254662156, blue: 0.276635766, alpha: 1)
+        dockIconView.dockIconViewBackground.colorMode = .focused
         dockIconView.text = "Focus"
+        dockIconView.show()
     }
     
     func waitDiffuse() {
-        dockIconView.dockIconViewBackground.layer?.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+        dockIconView.dockIconViewBackground.colorMode = .diffused
         dockIconView.text = "Diffuse"
+        dockIconView.show()
     }
 }
