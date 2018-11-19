@@ -112,7 +112,7 @@ class POMAppController: DockMenuDelegate {
         }
     }
     
-    func cancelAction() {
+    private func cancelAction() {
         pomtimer.stop()
         
         switch appMode {

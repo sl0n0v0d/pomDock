@@ -2,7 +2,6 @@
 import Cocoa
 
 protocol DockMenuDelegate: class {
-    func cancelAction()
     func diffuseAction()
 }
 
@@ -34,8 +33,6 @@ class POMDockMenu: NSMenu {
         super.init(title: "")
         
         self.addItem(withTitle: "Pomodoros today: \(POMStatistics.finishedPomodorosToday())", action: nil, keyEquivalent: "")
-        
-        self.addItem(withTitle: "Cancel", action:#selector(didSelectCancelItem), keyEquivalent: "").target = self
         
         self.addItem(withTitle: "Diffuse", action:#selector(didSelectDiffuseItem), keyEquivalent: "").target = self
         
@@ -84,10 +81,6 @@ class POMDockMenu: NSMenu {
         if let intervalMinutes = Double(sender.title), intervalMinutes > 0 {
             Config.shared.focusTime = intervalMinutes * 60
         }
-    }
-    
-    @objc private func didSelectCancelItem() {
-        pomMenuDelegate?.cancelAction()
     }
     
     @objc private func didSelectDiffuseItem() {
