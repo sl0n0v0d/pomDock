@@ -3,6 +3,7 @@ import Cocoa
 
 protocol DockMenuDelegate: class {
     func cancelAction()
+    func diffuseAction()
 }
 
 class POMDockMenu: NSMenu {
@@ -35,6 +36,8 @@ class POMDockMenu: NSMenu {
         self.addItem(withTitle: "Pomodoros today: \(POMStatistics.finishedPomodorosToday())", action: nil, keyEquivalent: "")
         
         self.addItem(withTitle: "Cancel", action:#selector(didSelectCancelItem), keyEquivalent: "").target = self
+        
+        self.addItem(withTitle: "Diffuse", action:#selector(didSelectDiffuseItem), keyEquivalent: "").target = self
         
         // pomodoro time interval submenu
         let setPomodoroIntervalMenu = NSMenu()
@@ -85,5 +88,9 @@ class POMDockMenu: NSMenu {
     
     @objc private func didSelectCancelItem() {
         pomMenuDelegate?.cancelAction()
+    }
+    
+    @objc private func didSelectDiffuseItem() {
+        pomMenuDelegate?.diffuseAction()
     }
 }

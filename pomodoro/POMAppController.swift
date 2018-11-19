@@ -33,6 +33,7 @@ class POMAppController: DockMenuDelegate {
     
     private func setFocusMode() {
         appMode = .focused
+        dockIcon.focusedLook()
         pomtimer.start(from: Config.shared.focusTime, tick: Config.shared.tickInterval) { timer in
             self.handleTick(timer)
         }
@@ -40,6 +41,7 @@ class POMAppController: DockMenuDelegate {
     
     private func setDiffuseMode() {
         appMode = .diffused
+        dockIcon.diffusedLook()
         pomtimer.start(from: Config.shared.diffuseTime, tick: Config.shared.tickInterval) { timer in
             self.handleTick(timer)
         }
@@ -47,12 +49,14 @@ class POMAppController: DockMenuDelegate {
     
     private func setWaitFocusMode() {
         appMode = .waitingFocus
-        dockIcon.waitFocus()
+        dockIcon.focusedLook()
+        dockIcon.text = "Focus"
     }
     
     private func setWaitDiffuseMode() {
         appMode = .waitingDiffuse
-        dockIcon.waitDiffuse()
+        dockIcon.text = "Diffuse"
+        dockIcon.diffusedLook()
     }
     
     //MARK: - Events
@@ -117,5 +121,11 @@ class POMAppController: DockMenuDelegate {
         case .diffused, .focused:
             setWaitFocusMode()
         }
+    }
+    
+    func diffuseAction() {
+        pomtimer.stop()
+        
+        setDiffuseMode()
     }
 }

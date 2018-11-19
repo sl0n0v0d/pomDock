@@ -27,22 +27,21 @@ class POMDockIcon {
                                                                             object: nil, queue: nil) { _ in
                                                                                 self.dockIconView.show()
         }
-        waitFocus()
+        dockIconView.text = "Focus"
+        focusedLook()
     }
     
     deinit {
         DistributedNotificationCenter.default().removeObserver(observerToken)
     }
     
-    func waitFocus(){
+    func focusedLook(){
         dockIconView.dockIconViewBackground.colorMode = .focused
-        dockIconView.text = "Focus"
         dockIconView.show()
     }
     
-    func waitDiffuse() {
+    func diffusedLook() {
         dockIconView.dockIconViewBackground.colorMode = .diffused
-        dockIconView.text = "Diffuse"
         dockIconView.show()
     }
 }
