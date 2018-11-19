@@ -10,6 +10,12 @@ class POMAppDelegate: NSObject, NSApplicationDelegate {
         // give focus back to previously active app
         appController.appActivated()
         NSApp.hide(self)
+        NSApp.deactivate()
+    }
+    
+     func applicationDidFinishLaunching(_ notification: Notification) {
+        // give focus back to previously active app
+        NSApp.hide(self)
     }
     
     func applicationDockMenu(_ sender: NSApplication) -> NSMenu? {
