@@ -4,8 +4,11 @@ import Foundation
 class Config {
     static let shared = Config()
     
-    let userDefaultsFocusKey = "focusTime"
-    let userDefaultsDiffuseKey = "defuseTime"
+    let tickInterval = 1.0
+    let grabAttentionInterval = 10.0
+    
+    private let userDefaultsFocusKey = "focusTime"
+    private let userDefaultsDiffuseKey = "defuseTime"
     
     var focusTime = 25 * 60.0 {
         didSet {
@@ -13,13 +16,11 @@ class Config {
         }
     }
     
-    var diffuseTime = 5 * 60.0{
+    var diffuseTime = 5 * 60.0 {
         didSet {
             UserDefaults.standard.set(focusTime, forKey:userDefaultsFocusKey)
         }
     }
-    
-    var tickInterval = 1.0
     
     init() {
         if let focusTime = UserDefaults.standard.object(forKey: userDefaultsFocusKey) as? Double, focusTime > 0 {

@@ -9,7 +9,7 @@ class POMUserAttentionGrabber {
         switch mode {
         case .waitingFocus, .waitingDiffuse:
             let attentionId = NSApp.requestUserAttention(.informationalRequest)
-            timer = Timer.scheduledTimer(withTimeInterval: 10, repeats: true, block: { (timer) in
+            timer = Timer.scheduledTimer(withTimeInterval: Config.shared.grabAttentionInterval, repeats: true, block: { (timer) in
                 NSApp.cancelUserAttentionRequest(attentionId)
                 NSApp.requestUserAttention(.informationalRequest)
             })
