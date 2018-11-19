@@ -6,18 +6,10 @@ class POMAppDelegate: NSObject, NSApplicationDelegate {
     
     private let appController = POMAppController()
     
-    func applicationDidFinishLaunching(_ notification: Notification) {
+    func applicationDidBecomeActive(_ notification: Notification) {
         // give focus back to previously active app
+        appController.appActivated()
         NSApp.hide(self)
-    }
-    
-    func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
-        // give focus back to previously active app
-        
-        appController.dockIconClicked()
-        NSApp.hide(self)
-        
-        return false
     }
     
     func applicationDockMenu(_ sender: NSApplication) -> NSMenu? {

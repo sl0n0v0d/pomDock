@@ -84,6 +84,6 @@ class POMDockMenu: NSMenu {
     }
     
     @objc private func didSelectDiffuseItem() {
-        pomMenuDelegate?.diffuseAction()
+        pomMenuDelegate?.diffuseAction() 
     }
 }

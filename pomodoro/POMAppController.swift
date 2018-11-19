@@ -61,7 +61,7 @@ class POMAppController: DockMenuDelegate {
     
     //MARK: - Events
     
-    func dockIconClicked() {
+    func appActivated() {
         switch appMode {
         case .waitingDiffuse:
             setDiffuseMode()
