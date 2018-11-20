@@ -18,6 +18,11 @@ class POMAppDelegate: NSObject, NSApplicationDelegate {
         NSApp.hide(self)
     }
     
+    func applicationDidResignActive(_ notification: Notification) {
+        // aborting modal dialog will resume current countdown timer
+        NSApp.abortModal()
+    }
+    
     func applicationDockMenu(_ sender: NSApplication) -> NSMenu? {
         let dockMenu = POMDockMenu()
         dockMenu.pomMenuDelegate = appController

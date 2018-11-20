@@ -7,7 +7,7 @@ class POMModalQuestion {
         alert.messageText = question
         alert.alertStyle = .warning
         alert.addButton(withTitle: "Yes")
-        alert.addButton(withTitle: "No")
+        alert.addButton(withTitle: "Cancel")
         let result = alert.runModal()
         return result == .alertFirstButtonReturn
     }
