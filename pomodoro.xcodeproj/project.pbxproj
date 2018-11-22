@@ -23,6 +23,7 @@
 		C0C99E01216CDB3B00B90AD5 /* POMAppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C99E00216CDB3B00B90AD5 /* POMAppController.swift */; };
 		C0C99E03216CDCFD00B90AD5 /* POMDockIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C99E02216CDCFD00B90AD5 /* POMDockIcon.swift */; };
 		C0C99E05216F601400B90AD5 /* POMTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C99E04216F601400B90AD5 /* POMTimer.swift */; };
+		C0DF4FD321A4432000768DB2 /* POMNotificationHUDWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DF4FD221A4432000768DB2 /* POMNotificationHUDWindow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		C0C99E00216CDB3B00B90AD5 /* POMAppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POMAppController.swift; sourceTree = "<group>"; };
 		C0C99E02216CDCFD00B90AD5 /* POMDockIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POMDockIcon.swift; sourceTree = "<group>"; };
 		C0C99E04216F601400B90AD5 /* POMTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POMTimer.swift; sourceTree = "<group>"; };
+		C0DF4FD221A4432000768DB2 /* POMNotificationHUDWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POMNotificationHUDWindow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				C0A186D1219331A2001C7C6C /* POMDockIconViewBackground.swift */,
 				C006AAAA2187386A00E4480B /* POMDockMenu.swift */,
 				C02B4540219076CF0073D9B5 /* POMModalQuestion.swift */,
+				C0DF4FD221A4432000768DB2 /* POMNotificationHUDWindow.swift */,
 				C0A186D321943CEA001C7C6C /* POMStatistics.swift */,
 				C0C99E04216F601400B90AD5 /* POMTimer.swift */,
 				C006AAA3217DCD6C00E4480B /* POMUserAttentionGrabber.swift */,
@@ -183,6 +186,7 @@
 				C0A186D421943CEA001C7C6C /* POMStatistics.swift in Sources */,
 				C0C99E03216CDCFD00B90AD5 /* POMDockIcon.swift in Sources */,
 				C006AAA4217DCD6C00E4480B /* POMUserAttentionGrabber.swift in Sources */,
+				C0DF4FD321A4432000768DB2 /* POMNotificationHUDWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

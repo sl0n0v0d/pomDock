@@ -1,5 +1,6 @@
 
 import Foundation
+import AppKit
 
 enum PomodoroMode {
     case waitingFocus
@@ -71,17 +72,14 @@ class POMAppController: DockMenuDelegate {
             pomtimer.stop()
             setWaitFocusMode()
         case .focused:
-            if pomtimer.paused {
-                pomtimer.resume()
+            pomtimer.pause()
+            let answer = POMModalQuestion.dialogYesNo(question: "Cancel current interval?")
+            if answer == true {
+                cancelAction()
             } else {
-                pomtimer.pause()
-                let answer = POMModalQuestion.dialogYesNo(question: "Cancel current interval?")
-                if answer == true {
-                    cancelAction()
-                } else {
-                    pomtimer.resume()
-                }
+                pomtimer.resume()
             }
+            NSApp.hide(nil)
         }
     }
     
