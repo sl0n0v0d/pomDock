@@ -75,8 +75,8 @@
 				C006AAA12179BB3400E4480B /* Log.swift */,
 				C0C99E00216CDB3B00B90AD5 /* POMAppController.swift */,
 				55DB8B6A21678655000FFFDA /* POMAppDelegate.swift */,
-				C0C99E02216CDCFD00B90AD5 /* POMDockIcon.swift */,
 				C0A19A42219B149900F693BA /* POMAppearance.swift */,
+				C0C99E02216CDCFD00B90AD5 /* POMDockIcon.swift */,
 				C0C99DFC216B7B4D00B90AD5 /* POMDockIconView.swift */,
 				C0A186D1219331A2001C7C6C /* POMDockIconViewBackground.swift */,
 				C006AAAA2187386A00E4480B /* POMDockMenu.swift */,
@@ -332,7 +332,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = blavry.pomodoro;
+				PRODUCT_BUNDLE_IDENTIFIER = com.blavryshchuk.pomodoro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
@@ -351,7 +351,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = blavry.pomodoro;
+				PRODUCT_BUNDLE_IDENTIFIER = com.blavryshchuk.pomodoro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};

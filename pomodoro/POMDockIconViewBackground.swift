@@ -31,13 +31,13 @@ class POMDockIconViewBackground: NSView {
         switch colorMode {
         case .focused:
             if NSAppearance.isDarkMode {
-                layer?.backgroundColor = #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1)
+                layer?.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
             } else {
                 layer?.backgroundColor = #colorLiteral(red: 0.8715433478, green: 0.3254662156, blue: 0.276635766, alpha: 1)
             }
         case .diffused:
             if NSAppearance.isDarkMode {
-                layer?.backgroundColor = #colorLiteral(red: 0.1960784346, green: 0.3411764801, blue: 0.1019607857, alpha: 1)
+                layer?.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
             } else {
                 layer?.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
             }
