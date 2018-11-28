@@ -12,7 +12,7 @@ class POMDockMenu: NSMenu {
     private var pomodoroIntervalsMinutes: [String] {
         get {
             #if DEBUG
-            return ["0.05", "5", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55", "60"]
+            return ["0.15", "5", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55", "60"]
             #else
             return ["5", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55", "60"]
             #endif
@@ -22,7 +22,7 @@ class POMDockMenu: NSMenu {
     private var diffuseIntervalsMinutes: [String] {
         get {
             #if DEBUG
-            return ["0.033", "5", "10", "15", "20", "25", "30"]
+            return ["0.066", "5", "10", "15", "20", "25", "30"]
             #else
             return ["5", "10", "15", "20", "25", "30"]
             #endif
