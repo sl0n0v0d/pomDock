@@ -40,7 +40,7 @@
 		C0A186D1219331A2001C7C6C /* POMDockIconViewBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POMDockIconViewBackground.swift; sourceTree = "<group>"; };
 		C0A186D321943CEA001C7C6C /* POMStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POMStatistics.swift; sourceTree = "<group>"; };
 		C0A19A42219B149900F693BA /* POMAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POMAppearance.swift; sourceTree = "<group>"; };
-		C0C99DFB216B565300B90AD5 /* pomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pomodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0C99DFB216B565300B90AD5 /* Focus And Diffuse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Focus And Diffuse.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0C99DFC216B7B4D00B90AD5 /* POMDockIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POMDockIconView.swift; sourceTree = "<group>"; };
 		C0C99DFE216B7D9600B90AD5 /* POMDockIconView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = POMDockIconView.xib; sourceTree = "<group>"; };
 		C0C99E00216CDB3B00B90AD5 /* POMAppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POMAppController.swift; sourceTree = "<group>"; };
@@ -64,7 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				55DB8B6921678655000FFFDA /* pomodoro */,
-				C0C99DFB216B565300B90AD5 /* pomodoro.app */,
+				C0C99DFB216B565300B90AD5 /* Focus And Diffuse.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,9 +105,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		55DB8B6621678655000FFFDA /* pomodoro */ = {
+		55DB8B6621678655000FFFDA /* Focus And Diffuse */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 55DB8B7521678657000FFFDA /* Build configuration list for PBXNativeTarget "pomodoro" */;
+			buildConfigurationList = 55DB8B7521678657000FFFDA /* Build configuration list for PBXNativeTarget "Focus And Diffuse" */;
 			buildPhases = (
 				55DB8B6321678655000FFFDA /* Sources */,
 				55DB8B6421678655000FFFDA /* Frameworks */,
@@ -117,9 +117,9 @@
 			);
 			dependencies = (
 			);
-			name = pomodoro;
+			name = "Focus And Diffuse";
 			productName = pomodoro;
-			productReference = C0C99DFB216B565300B90AD5 /* pomodoro.app */;
+			productReference = C0C99DFB216B565300B90AD5 /* Focus And Diffuse.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -150,7 +150,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				55DB8B6621678655000FFFDA /* pomodoro */,
+				55DB8B6621678655000FFFDA /* Focus And Diffuse */,
 			);
 		};
 /* End PBXProject section */
@@ -369,7 +369,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		55DB8B7521678657000FFFDA /* Build configuration list for PBXNativeTarget "pomodoro" */ = {
+		55DB8B7521678657000FFFDA /* Build configuration list for PBXNativeTarget "Focus And Diffuse" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				55DB8B7621678657000FFFDA /* Debug */,
