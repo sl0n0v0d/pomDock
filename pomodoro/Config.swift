@@ -5,7 +5,7 @@ class Config {
     static let shared = Config()
     
     let tickInterval = 1.0
-    let grabAttentionInterval = 10.0
+    let grabAttentionInterval = 2.0
     
     private let userDefaultsFocusKey = "focusTime"
     private let userDefaultsDiffuseKey = "defuseTime"
