@@ -3,7 +3,10 @@ import Cocoa
 
 class POMStatistics {
     private static let userDefaultsKey = "finishedPomodorsDates"
-
+    private static let outdatedPomodorosTimer = POMDeepNightTimer {
+        removeOutdatedPomodoros()
+    }
+    
     class func pomodoroDone() {
         var finishedDatesToSave = [Date]()
         
@@ -27,6 +30,8 @@ class POMStatistics {
     }
 
     private class func removeOutdatedPomodoros() {
+        _ = outdatedPomodorosTimer // init static (lazy) property
+        
         guard let finishedPomodorsDates = UserDefaults.standard.object(forKey:userDefaultsKey) as? [Date] else {
             return
         }

@@ -24,6 +24,7 @@
 		C0C99E03216CDCFD00B90AD5 /* POMDockIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C99E02216CDCFD00B90AD5 /* POMDockIcon.swift */; };
 		C0C99E05216F601400B90AD5 /* POMTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C99E04216F601400B90AD5 /* POMTimer.swift */; };
 		C0DF4FD321A4432000768DB2 /* POMNotificationHUDWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DF4FD221A4432000768DB2 /* POMNotificationHUDWindow.swift */; };
+		C49002812424DFB10088AD80 /* POMDeepNightTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49002802424DFB10088AD80 /* POMDeepNightTimer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		C0C99E02216CDCFD00B90AD5 /* POMDockIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POMDockIcon.swift; sourceTree = "<group>"; };
 		C0C99E04216F601400B90AD5 /* POMTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POMTimer.swift; sourceTree = "<group>"; };
 		C0DF4FD221A4432000768DB2 /* POMNotificationHUDWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POMNotificationHUDWindow.swift; sourceTree = "<group>"; };
+		C49002802424DFB10088AD80 /* POMDeepNightTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POMDeepNightTimer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				C0DF4FD221A4432000768DB2 /* POMNotificationHUDWindow.swift */,
 				C0A186D321943CEA001C7C6C /* POMStatistics.swift */,
 				C0C99E04216F601400B90AD5 /* POMTimer.swift */,
+				C49002802424DFB10088AD80 /* POMDeepNightTimer.swift */,
 				C006AAA3217DCD6C00E4480B /* POMUserAttentionGrabber.swift */,
 				C006AAA7217F1DCC00E4480B /* Resources */,
 			);
@@ -177,6 +180,7 @@
 				C0C99DFD216B7B4D00B90AD5 /* POMDockIconView.swift in Sources */,
 				C02B4541219076CF0073D9B5 /* POMModalQuestion.swift in Sources */,
 				C006AAA22179BB3400E4480B /* Log.swift in Sources */,
+				C49002812424DFB10088AD80 /* POMDeepNightTimer.swift in Sources */,
 				C006AAAB2187386A00E4480B /* POMDockMenu.swift in Sources */,
 				C0C99E01216CDB3B00B90AD5 /* POMAppController.swift in Sources */,
 				C0A186D2219331A2001C7C6C /* POMDockIconViewBackground.swift in Sources */,
